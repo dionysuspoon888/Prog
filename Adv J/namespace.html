@@ -1,0 +1,22 @@
+<html>
+<head>
+<script type="text/javascript">
+(function() {
+  function $(id) {
+    return document.getElementById(id);
+  }
+  function alertNodeName(id) {
+    alert($(id).nodeName);
+  }
+  window['myNamespace'] = {};
+  window['myNamespace']['showNodeName'] = alertNodeName;
+})();
+</script>
+</head>
+<body>
+<h3 id='headerid'>Namespace</h3>
+<script type="text/javascript">
+  myNamespace.showNodeName('headerid');
+</script>
+</body>
+</html>

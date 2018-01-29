@@ -1,0 +1,24 @@
+<html>
+<head>
+<script type="text/javascript">
+function myConstructor() {
+}
+
+// Add a static property
+myConstructor.name = 'Tony';
+// Add a method
+myConstructor.alertName = function() {
+  alert(this.name);
+}
+// Execute the method
+myConstructor.alertName();
+
+var anExample = new myConstructor();
+//anExample.alertName(); // will result in an error!
+
+</script>
+</head>
+<body>
+<h3>Static Members</h3>
+</body>
+</html>

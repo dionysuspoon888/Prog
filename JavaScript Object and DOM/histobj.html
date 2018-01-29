@@ -1,0 +1,27 @@
+<html>
+<head>
+<script type="text/javascript">
+document.write("Number of URLs in history list: " + history.length);
+function goBack()
+{
+  window.history.back()
+}
+
+function goForward()
+{
+  window.history.forward()
+}
+
+</script>
+
+</head>
+<body>
+<h1>History object</h1>
+
+<input type="button" value="Back" onclick="goBack()" />
+<input type="button" value="Forward" onclick="goForward()" />
+<br />
+<a href="index.html">Go Home</a><br /> 
+ 
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<body>
+<h1>Date object</h1>
+<script type="text/javascript">
+// Example of Date object
+var myDate = new Date(); // current date and time
+var d1 = new Date("October 13, 1975 11:13:00");
+var d2 = new Date(12,0,24);
+var d3 = new Date(2012,5,24,11,33,0);
+document.write("Today: " + myDate + "<br />"); // current date time
+document.write("d1:" + d1 + "<br />"); // 1975 Oct 24
+document.write("d2:" + d2 + "<br />"); // 1912 Jan 24
+document.write("d3:" + d3 + "<br />"); // 2012 Jun 24 11:33:00
+
+myDate.setFullYear(2012, 0, 24); // Set specific date
+document.write("myDate:" + myDate + "<br />"); // 2012 Jan 24
+</script>
+<a href="index.html">Go Home</a><br /> 
+</body>
+</html>

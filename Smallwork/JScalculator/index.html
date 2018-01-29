@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>1</title>
+
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+	font-size:25px;
+	text-align:center;
+}
+</style>
+
+<script>
+var x= "";
+var y= "";
+var s=0;
+var z=0;
+
+
+var i=0;
+var k=0;
+var m=0;
+
+
+function a(){
+
+document.getElementById("R").innerHTML =x+s+y;
+}
+
+function b(){
+document.getElementById("R").innerHTML =x+s+y+z;
+}
+
+function c(){
+
+
+if (m==2 && y=="+"){
+s=s+z;
+
+}else if(m==1&& y=="+"){
+s= -s + z;
+m=2;
+}
+
+if (m==2 && y=="*"){
+s=s*z;
+}else if(m==1 && y=="*"){
+s= -s*z;
+m=2;
+}
+
+if (m==2 && y=="/"){
+s=s/z;
+s=Math.round(s);
+
+if (isNaN(s)){
+Cl();
+s="C";
+return a();
+
+}
+
+
+}else if (m==1 && y=="/"){
+s=-s/z;
+s=Math.round(s);
+m=2;
+
+if (isNaN(s)){
+Cl();
+s="C";
+return a();
+
+}
+
+}
+
+if (m==2 && y=="-"){
+s=s-z;
+}else if(m==1&& y=="-"){
+s= -s -z ;
+m=2;
+}
+
+
+y="";
+x="";
+i=0;
+k=0;
+z=0;
+
+
+
+
+}
+
+function Digit(dig){
+
+if (s=="C"){
+}else{
+
+if (i==0){
+
+if (s == 0){
+
+s=dig;
+}else{
+s =10*s+dig;
+}
+
+
+if(m==0){
+m=2;
+}
+
+return a();
+
+
+}else if(i==1){
+if (z == 0){
+
+z=dig;
+}else{
+z =10*z+dig;
+}
+
+k=1;
+return b();
+}
+
+}
+
+}
+
+
+function Sign(sig){
+
+if (s=="C"){
+}else{
+
+if (s==0 && m==1){
+x="";
+m=0;
+return a();
+
+}else if (k==0){
+y=sig;
+i=1;
+return a();
+}else if(k==1){
+c();
+if (s=="C"){
+}else{
+x="";
+y=sig;
+i=1;
+return a();
+}
+
+}
+
+}
+
+}
+
+function Minus(){
+
+if (s=="C"){
+}else{
+
+if (i==0 && m==0 && k==0){
+x="-";
+m=1;
+return a();
+}else if(k==0){
+y="-";
+i=1;
+return a();
+}else if(k==1){
+
+c();
+x="";
+y="-";
+i=1;
+return a();
+
+}
+
+}
+
+}
+
+function Eq(){
+if (k==1 && i==1){
+c();
+return a();
+}
+
+}
+
+function Cl(){
+x= "";
+y= "";
+s= 0;
+i=0;
+k=0;
+m=0;
+z=0;
+
+return a();
+}
+
+
+</script>
+
+
+
+</head>
+
+<body>
+
+
+<table>
+<tr>
+
+<td style="text-align:left" id="R" colspan=4>
+0
+</td>
+
+</tr>
+
+<tr>
+<td OnClick="Digit(7)">7</td>
+<td OnClick="Digit(8)">8</td>
+<td OnClick="Digit(9)">9</td>
+<td OnClick="Cl()">C</td>
+</tr>
+
+<tr>
+<td OnClick="Digit(4)">4</td>
+<td OnClick="Digit(5)">5</td>
+<td OnClick="Digit(6)">6</td>
+<td OnClick="Minus()">-</td>
+</tr>
+
+<tr>
+<td OnClick="Digit(1)">1</td>
+<td OnClick="Digit(2)">2</td>
+<td OnClick="Digit(3)">3</td>
+<td OnClick="Sign('+')">+</td>
+</tr>
+
+<tr>
+<td OnClick="Digit(0)">0</td>
+<td OnClick="Sign('*')">*</td>
+<td OnClick="Sign('/')">/</td>
+<td OnClick="Eq()">=</td>
+</tr>
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<head>
+<script type="text/javascript">
+function handleSpanClick() {
+  alert("Click on Span");
+}
+function handleDivClick() {
+  alert("Click on Div");
+}
+function handleBodyClick() {
+  alert("Click on Body");
+}
+window.onload = function() {
+  var oDiv = document.getElementById('div1');
+  var oSpan = document.getElementById('span1');
+  var oBody = document.body;
+  oBody.addEventListener('click', handleBodyClick, true);
+  oDiv.addEventListener('click', handleDivClick, true);
+  oSpan.addEventListener('click', handleSpanClick, true);
+  oSpan.addEventListener('click', handleSpanClick, false);
+  oDiv.addEventListener('click', handleDivClick, false);
+  oBody.addEventListener('click', handleBodyClick, false);
+}
+</script>
+</head>
+<body>
+<h1>Event flow on DOM-compliant browsers</h1>
+<div id="div1">
+	Work for DOM-compliant browsers<br />
+	<span id="span1">Click me to alert!</span>
+</div>
+</body>
+</html>

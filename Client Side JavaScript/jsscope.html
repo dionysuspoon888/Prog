@@ -1,0 +1,21 @@
+<html>
+<body>
+<h1>JavaScript Scope</h1>
+<script type="text/javascript">
+// jsscope.html
+var x;
+x = "Variable ouside a function becomes GLOBAL";
+function writeGlobalX() {
+  document.write("<p>x = " + x + "</p>");;
+}
+writeGlobalX();
+
+function writeLocalX() {
+  var x;
+  document.write("<p>Unassigned local variable x = " + x + "</p>");
+}
+writeLocalX();
+</script>
+</body>
+</html>
+ 

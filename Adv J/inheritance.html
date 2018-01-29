@@ -1,0 +1,30 @@
+<html>
+<head>
+<script type="text/javascript">
+// Create a person object instance
+var person = {};
+person.getName = function() { return prompt("What is your name?","")};
+person.getAge = function() { return prompt("How old are you?","") };
+// Create an employee object instance
+var employee = {};
+employee.getTitle = function() { return prompt("What is your title?","") };
+employee.getSalary = function() { return prompt("How much you earn?","") };
+// Inherit methods from person
+employee.getName = person.getName;
+employee.getAge = person.getAge;
+
+function getData() {
+  document.getElementById("name").innerHTML = "My name is " + employee.getName();
+}
+</script>
+</head>
+<body onload="getData()">
+<h3>Inheritance</h3>
+<p>
+<span id="name"></span><br/>
+<span id="age"></span><br/>
+<span id="title"></span><br/>
+<span id="salary"></span>
+</p>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<Alloy>
+	<TabGroup>
+		<Require src="postForm" />
+	</TabGroup>
+</Alloy>
+
+

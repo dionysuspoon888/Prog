@@ -1,0 +1,24 @@
+<html>
+<head>
+<script type="text/javascript">
+function myConstructor(message) {
+  this.myMessage = message;
+}
+
+myConstructor.prototype.appendMessage = function(string) {
+  this.myMessage += ' ' + string;
+  alert(this.myMessage);
+}
+
+// Calling the appendMessage() method will work for a new instance
+var myObject = new myConstructor('Hello World!');
+myObject.appendMessage('John');
+// However, you cannot call it on myConstructor directly.
+// myConstructor.appendMessage('Mary'); // you will get error instead!
+
+</script>
+</head>
+<body>
+<h3>Public Methods</h3>
+</body>
+</html>

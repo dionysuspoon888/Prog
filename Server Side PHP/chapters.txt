@@ -1,0 +1,9 @@
+Chapter 1 Foundations of Web Applications
+Chapter 2 HTML and CSS
+Chapter 3 Server Side PHP
+Chapter 4 Database MySQL
+Chapter 5 Cookies and Sessions
+Chapter 6 Client Side JavaScript
+Chapter 7 JavaScript Object and DOM
+Chapter 8 Ajax and Web Services
+Chapter 9 Advanced JavaScript

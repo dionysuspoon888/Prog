@@ -1,0 +1,15 @@
+<html>
+<body>
+<script type="text/javascript">
+var cardNumbers = ['Ace','2','3','4','5','6','7','8','9','10','Jack','Queen','King'];
+var cardSuites = ['Hearts','Diamonds','Clubs','Spades'];
+document.write("You drew the following cards:");
+for(var i = 0; i < 5; i++)
+{
+  var numberDrawn = Math.floor(Math.random()*13);
+  var suiteDrawn = Math.floor(Math.random()*4);
+  document.write("<br />The " + cardNumbers[numberDrawn] + " of " + cardSuites[suiteDrawn]);
+}
+</script>
+</body>
+</html>

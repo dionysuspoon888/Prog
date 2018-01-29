@@ -1,0 +1,27 @@
+<html>
+<head>
+<script type="text/javascript">
+function myConstructor(message) {
+  this.myMessage = message;
+  // Private properties
+  var separator = ' ¡V ';
+  var myOwner = this;
+  // Private method
+  function alertMessage() {
+    alert(myOwner.myMessage);
+  }
+  // Show the message on instantiation
+  alertMessage();
+}
+
+var anObject = new myConstructor('Hello World!');
+// You cannot call alertMessage outside myConstructor
+// myConstructor.alertMessage(); // you will get error!
+// anObject.alertMessage(); // you will get error!
+
+</script>
+</head>
+<body>
+<h3>Private Members</h3>
+</body>
+</html>

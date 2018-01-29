@@ -1,0 +1,16 @@
+-- mysql -hcslinux0 -uusername -ppassword database_name
+CREATE TABLE webnews (
+  id INT NOT NULL AUTO_INCREMENT,
+  title VARCHAR(30) NOT NULL,
+  modified DATE NOT NULL,
+  imgurl VARCHAR(255),
+  PRIMARY KEY (id)
+);
+INSERT INTO webnews (title, modified, imgurl)
+VALUES ('The infoday2015', '2015-09-01', 'http://cslinux0.comp.hkbu.edu.hk/~tkcchan/img/infoday.jpg');
+INSERT INTO webnews (title, modified, imgurl)
+VALUES ('Loving my life@HKBU', '2015-09-02', 'http://cslinux0.comp.hkbu.edu.hk/~tkcchan/img/sqlite.jpg');
+INSERT INTO webnews (title, modified, imgurl)
+VALUES ('Hello world', '2015-09-03', 'http://cslinux0.comp.hkbu.edu.hk/~tkcchan/img/hello_world.gif');
+INSERT INTO webnews (title, modified)
+VALUES ('Title without image', '2015-09-03');

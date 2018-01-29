@@ -1,0 +1,26 @@
+<html>
+<head>
+<script type="text/javascript" src="crossBrowser.js"></script>
+<script type="text/javascript">
+function handleClick() {
+  alert("Click!");
+  var oDiv = document.getElementById('div1');
+  EventUtil.removeEvent(oDiv, 'click', handleClick);
+  oDiv.innerHTML = "No more alert on click!";
+}
+
+window.onload = function() {
+  var oDiv = document.getElementById('div1');
+  EventUtil.addEvent(oDiv, 'click', handleClick);
+}
+</script>
+</head>
+<body>
+<h1>Cross Browser Event Handling</h1>
+Work for both IE and DOM-compliant browsers<br />
+<div id="div1" style="background-color:red;width:200px">Click me to alert!</div>
+<br />
+<a href="eventie.html">Go for IE Event Handling</a><br /> 
+<a href="eventdom.html">Go for DOM-compliant Event Handling</a><br />
+</body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+<head>
+<script type="text/javascript">
+window.onload = function()
+{
+  var cells = [['A', 'B', 'C'], ['D', 'E', 'F'], ['G', 'H', 'I']];
+  var noofrow = cells.length;
+  var noofcol = cells[0].length;
+
+  var aTable = document.createElement("TABLE");
+  var aTBody = document.createElement("TBODY");
+  aTable.setAttribute("border", "1");
+  aTable.appendChild(aTBody);
+  for (i=0; i<noofrow; i++)
+  {
+    var aTr = document.createElement("TR");
+    for (j=0; j<noofcol; j++)
+    {
+      var aTd = document.createElement("TD");
+	  aTd.appendChild(document.createTextNode(cells[i][j]))
+      aTr.appendChild(aTd);
+    }
+    aTBody.appendChild(aTr);
+  }
+  var aNode;
+  aNode = document.documentElement; 
+  aNode = aNode.lastChild;
+  aNode.appendChild(aTable);
+}
+</script>
+</head>
+<body>
+</body>
+</html>

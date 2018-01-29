@@ -1,0 +1,18 @@
+#navigationbar {
+  height:50px;
+  background-color:green
+}
+#sidenavigation {
+  float:left;
+  height:200px;
+  width:200px;
+  background-color:blue
+}
+#content {
+  background-color:white
+}
+#pagefooter {
+  clear:left;
+  height:30px;
+  background-color:red
+}

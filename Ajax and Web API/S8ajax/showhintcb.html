@@ -1,0 +1,37 @@
+<html>
+<head>
+<script type="text/javascript">
+function getxmlhttp() {
+  var xmlhttp=null 
+  if (window.XMLHttpRequest) { 
+    xmlhttp=new XMLHttpRequest()
+  } else if (window.ActiveXObject) { 
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP") 
+  } 
+  return xmlhttp 
+}
+
+function showHint(str) {
+  if (str.length<=0) return; 
+
+  var xmlhttp = getxmlhttp();
+  xmlhttp.onreadystatechange=statechanged;
+  xmlhttp.open("GET","gethint.php?q="+str,true);
+  xmlhttp.send();
+
+  function statechanged() {
+    if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+      document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+    }
+  }
+}
+</script>
+</head>
+<body>
+<h3>Start typing a name in the input field below:</h3>
+<form action=""> 
+First name: <input type="text" id="txt1" onkeyup="showHint(this.value)" />
+</form>
+<p>Suggestions: <span id="txtHint"></span></p> 
+</body>
+</html>

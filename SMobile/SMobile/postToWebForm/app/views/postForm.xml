@@ -1,0 +1,10 @@
+<Alloy>
+	<Tab title="Tab Title" id="postTab">
+		<Window title="Win Title">
+			<TextField id="name"></TextField>
+			<TextField id="age"></TextField>
+			<Button id="postBtn" onClick="postAction">Submit</Button>
+		</Window>
+	</Tab>
+</Alloy>
+

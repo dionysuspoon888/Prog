@@ -1,0 +1,52 @@
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+var tableem = document.createElement("TABLE");
+var tbodyem = document.createElement("TBODY");
+var trem1 = document.createElement("TR");
+var trem2 = document.createElement("TR");
+var tdem1 = document.createElement("TD");
+var tdem2 = document.createElement("TD");
+var tdem3 = document.createElement("TD");
+var tdem4 = document.createElement("TD");
+var txem1 = document.createTextNode("A");
+var txem2 = document.createTextNode("B");
+var txem3 = document.createTextNode("C");
+var txem4 = document.createTextNode("D");
+
+var aNode;
+aNode = document.documentElement;	//Starts with HTML document
+aNode = aNode.lastChild;			//Moves to body element
+aNode.appendChild(tableem);			//Adds the table element
+
+aNode = aNode.lastChild;			//Moves to the table element
+aNode.setAttribute("border", "1");	//Adds border attribute to the table element
+aNode.appendChild(tbodyem);			//Adds the tbody element
+aNode = aNode.lastChild;			//Moves to the tbody element
+aNode.appendChild(trem1);			//Adds the TR element
+aNode = aNode.lastChild;			//Moves the TR element
+aNode.appendChild(tdem1);			//Adds the TD element
+aNode.appendChild(tdem2);			//Adds the TD element
+
+aNode = aNode.firstChild;			//Moves to the first TD element
+aNode.appendChild(txem1);			//Adds the first text node
+aNode = aNode.nextSibling;			//Moves to the next TD element
+aNode.appendChild(txem2);			//Adds the second text node
+
+aNode = aNode.parentNode;			//Moves back to the TR element
+aNode = aNode.parentNode;			//Moves back to the tbody element
+aNode.appendChild(trem2);			//Adds the TR element
+aNode = aNode.lastChild;			//Moves the TR element
+aNode.appendChild(tdem3);			//Adds the TD element
+aNode.appendChild(tdem4);			//Adds the TD element
+
+aNode = aNode.firstChild;			//Moves to the first TD element
+aNode.appendChild(txem3);			//Adds the third text node
+aNode = aNode.nextSibling;			//Moves to the next TD element
+aNode.appendChild(txem4);			//Adds the forth text node
+
+</script>
+</body>
+</html>

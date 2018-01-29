@@ -1,0 +1,28 @@
+<html>
+<head>
+<script type="text/javascript">
+function showHint(str) {
+  if (str.length<=0) return;
+  
+  var xmlhttp=new XMLHttpRequest();
+  xmlhttp.onreadystatechange=statechanged;
+  xmlhttp.open("POST","gethintpost.php",true);
+  xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xmlhttp.send("q="+str);
+  
+  function statechanged() {
+    if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+      document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+    }
+  }
+}
+</script>
+</head>
+<body>
+<h3>Start typing a name in the input field below:</h3>
+<form action=""> 
+First name: <input type="text" id="txt1" onkeyup="showHint(this.value)" />
+</form>
+<p>Suggestions: <span id="txtHint"></span></p> 
+</body>
+</html>

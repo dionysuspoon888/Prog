@@ -1,0 +1,198 @@
+/* CSS Document */
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 5px;
+}
+
+
+/* head */
+body {
+	background-color: #FFFFFF;
+}
+
+h1{
+height:95px;
+padding-top:30px;
+margin:auto;
+text-align:center;
+
+background-color: #FF0000;
+color:#000000;
+}
+
+/*bar */
+#t-menu{
+list-style-type: none;
+margin: 0;
+padding:0;
+overflow: hidden;
+background-color: lightblue;
+}
+ 
+#t-menu li{
+float:left;
+display: block;
+color: #FFFFFF;
+text-align: center;
+width:50%;
+padding-top:10px;
+padding-bottom:10px;
+text-decoration: none;
+
+}
+
+
+#t-menu li:hover {
+background-color: blue;
+}
+ 
+ /*body */
+ 
+ /* left */
+#l-menu{
+list-style-type: none;
+margin-top:5px;
+padding:0px;
+color: #FFFFFF;
+width: 100%;
+
+}
+
+#l-menu li{
+padding: 8px;
+margin-bottom: 7px;
+background-color: lightgreen;
+color: #FFFFFF;
+}
+
+#l-menu li:hover {
+background-color: darkgreen;
+}
+
+/* right */
+#r-menu{
+list-style-type: none;
+margin-top:5px;
+padding:0px;
+color: #FFFFFF;
+width: 100%;
+
+}
+
+#r-menu li{
+padding: 8px;
+margin-bottom: 7px;
+background-color: deeppink;
+color: #FFFFFF;
+text-align: center;
+}
+
+#r-menu li:hover {
+background-color: darkred;
+}
+
+/*bottom */
+#footer {
+background-color: orange;
+color: black;
+
+font-size: 14px;
+padding: 15px;
+}
+
+/* center */
+#main{
+margin:0px;
+padding:10px;
+text-align:justify;
+
+}
+
+#main h3{
+font-style: italic;
+}
+
+.filename{
+color: red;
+font-style: italic;
+}
+
+.bold{
+color: red;
+text-transform: uppercase;
+font-weight: bold;
+}
+
+
+/* For desktop: */
+
+
+.col-1 {width: 10%;}
+.col-2 {width: 20%;}
+.col-3 {width: 30%;}
+.col-4 {width: 40%;}
+.col-5 {width: 50%;}
+.col-6 {width: 60%;}
+.col-7 {width: 70%;}
+.col-8 {width: 80%;}
+.col-9 {width: 90%;}
+.col-10 {width:100%;}
+
+
+/* For tablet */
+
+@media only screen and (max-width: 768px) {
+
+.col-m1 {width: 10%;}
+.col-m2 {width: 20%;}
+.col-m3 {width: 30%;}
+.col-m4 {width: 40%;}
+.col-m5 {width: 50%;}
+.col-m6 {width: 60%;}
+.col-m7 {width: 70%;}
+.col-m8 {width: 80%;}
+.col-m9 {width: 90%;}
+.col-mf {width: 100%;}
+
+body{
+background-color: yellow;
+}
+
+
+}
+
+/* For mobile */
+@media only screen and (max-width: 600px) {
+.col-m1 {width: 100%;}
+.col-m2 {width: 100%;}
+.col-m3 {width: 100%;}
+.col-m4 {width: 100%;}
+.col-m5 {width: 100%;}
+.col-m6 {width: 100%;}
+.col-m7 {width: 100%;}
+.col-m8 {width: 100%;}
+.col-m9 {width: 100%;}
+.col-mf {width: 100%;}
+
+
+
+body{
+background-color: yellow;
+}
+
+
+}

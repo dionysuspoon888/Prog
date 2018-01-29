@@ -1,0 +1,28 @@
+<html>
+<head>
+<script type="text/javascript">
+// Create person constructor
+function person(sName) {
+  this.name = sName;
+  this.sayName = function() {alert(this.name);}
+}
+// Create employee constructor
+function employee(sName, sTitle) {
+  // Inherite person constructor
+  //this.newMethod = person;
+  //this.newMethod(sName);
+  //delete this.newMethod;
+  person.call(this, sName);
+  this.title = sTitle;
+}
+// Create employee object
+var aEmployee = new employee('Tommy', 'Programmer');
+aEmployee.sayName();
+
+
+</script>
+</head>
+<body>
+<h3>Inheritance of constructor</h3>
+</body>
+</html>

@@ -1,0 +1,23 @@
+"#name": {
+    top:10,
+    left:10,
+    width:300,
+    height:40,
+    hintText:'Name',
+    borderStyle:Titanium.UI.INPUT_BORDERSTYLE_ROUNDED
+}
+"#age" : {
+    top:60,
+    left:10,
+    width:300,
+    height:40,
+    hintText:'Age',
+    borderStyle:Titanium.UI.INPUT_BORDERSTYLE_ROUNDED 
+}
+"#postBtn": {
+    top:110,
+    width:90,
+    height:35,
+    backgroundColor: "red"
+}
+

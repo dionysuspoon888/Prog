@@ -1,0 +1,15 @@
+<html>
+<head>
+<script type="text/javascript">
+var person = {name:"Tommy"}
+var say = function(greeting){
+    alert(greeting + ', ' + this.name);
+};
+say.call(person, 'Hello');
+say.apply(person, ['Goodbye']);
+</script>
+</head>
+<body>
+<h3>Call and Apply</h3>
+</body>
+</html>

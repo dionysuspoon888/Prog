@@ -1,0 +1,26 @@
+<html>
+<head></head>
+<body>
+<script type="text/javascript">
+var tableem = document.createElement("TABLE");
+var tbodyem = document.createElement("TBODY");
+var trem1 = document.createElement("TR");
+var tdem1 = document.createElement("TD");
+var txem1 = document.createTextNode("A");
+
+var aNode;
+aNode = document.documentElement; // Get the HTML 
+aNode = aNode.lastChild; // Move to body
+aNode.appendChild(tableem); // Add table elements
+aNode = aNode.lastChild; // Move to table;
+aNode.setAttribute("border", "1"); // Add border attribute to table elements
+aNode.appendChild(tbodyem);  // Add tbody element
+aNode = aNode.lastChild;  // Move to tbody;
+aNode.appendChild(trem1);  // Add tr element
+aNode = aNode.lastChild;  // Move to tr element
+aNode.appendChild(tdem1);  // Add td element
+aNode = aNode.firstChild;  // Move to td element
+aNode.appendChild(txem1);  // Add text element "A"
+</script>
+</body>
+</html>

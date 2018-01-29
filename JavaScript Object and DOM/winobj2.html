@@ -1,0 +1,19 @@
+<html>
+<head>
+<script type="text/javascript">
+var int=setInterval("clock()",1000);
+function clock()
+{
+var d=new Date();
+var t=d.toLocaleTimeString();
+document.getElementById("clock").value=t;
+}
+</script>
+</head>
+<body>
+<h1>Window object: Example 2</h1>
+<input type="text" id="clock" />
+<button onClick="int=window.clearInterval(int)">Stop</button>
+<a href="index.html">Go Home</a><br /> 
+</body>
+</html>
